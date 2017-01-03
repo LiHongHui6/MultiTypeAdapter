@@ -15,11 +15,11 @@ import java.util.List;
  * Created by yq05481 on 2016/12/30.
  */
 
-public class BetterAdapter extends RecyclerView.Adapter<BaseViewHolder> {
+public class MultiTypeAdapter extends RecyclerView.Adapter<BaseViewHolder> {
     private TypeFactory typeFactory;
     private List<Visitable> models;
 
-    public BetterAdapter(List<Visitable> models) {
+    public MultiTypeAdapter(List<Visitable> models) {
         this.models = models;
         this.typeFactory = new TypeFactoryForList();
 
