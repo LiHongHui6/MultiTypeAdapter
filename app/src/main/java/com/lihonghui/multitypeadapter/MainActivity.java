@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         List<Visitable> models = new ArrayList<>();
 
         for (int index = 0; index < 50; index++ ){
-            models.add(new Normal("Type normal "+ index));
+            models.add(new Normal("Type normal !!!~~~~~~~~~~~~~!!"+ index));
         }
 
         return models;
