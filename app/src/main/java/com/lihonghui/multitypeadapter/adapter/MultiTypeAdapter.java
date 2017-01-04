@@ -1,5 +1,6 @@
 package com.lihonghui.multitypeadapter.adapter;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,7 +28,9 @@ public class MultiTypeAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
     @Override
     public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = View.inflate(parent.getContext(), viewType, null);
+        Context context = parent.getContext();
+
+        View itemView = View.inflate(context,viewType,null);
         return typeFactory.createViewHolder(viewType,itemView);
     }
 
@@ -38,11 +41,16 @@ public class MultiTypeAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
     @Override
     public int getItemCount() {
+        if(null == models){
+            return  0;
+        }
         return models.size();
     }
+
 
     @Override
     public int getItemViewType(int position) {
         return models.get(position).type(typeFactory);
     }
+
 }

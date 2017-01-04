@@ -5,7 +5,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.lihonghui.multitypeadapter.R;
-import com.lihonghui.multitypeadapter.adapter.BetterAdapter;
+import com.lihonghui.multitypeadapter.adapter.MultiTypeAdapter;
 import com.lihonghui.multitypeadapter.model.Normal;
 
 
@@ -19,7 +19,7 @@ public class NormalViewHolder extends BaseViewHolder<Normal> {
     }
 
     @Override
-    public void setUpView(final Normal model, int position, BetterAdapter adapter) {
+    public void setUpView(final Normal model, int position, MultiTypeAdapter adapter) {
         final TextView textView = (TextView) getView(R.id.normal_title);
         textView.setText(model.getText());
 

@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.lihonghui.multitypeadapter.adapter.BetterAdapter;
+import com.lihonghui.multitypeadapter.adapter.MultiTypeAdapter;
 import com.lihonghui.multitypeadapter.model.Normal;
 import com.lihonghui.multitypeadapter.model.One;
 import com.lihonghui.multitypeadapter.model.Three;
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(2,new Three("Type Three 0"));
         list.add(new One("Type One 1"));
 
-        recyclerView.setAdapter(new BetterAdapter(list));
+        recyclerView.setAdapter(new MultiTypeAdapter(list));
     }
 
     private List<Visitable> getData(){
